@@ -21,6 +21,9 @@
 import Lifecycle from './hooks/Lifecycle';
 import DemoHook from './hooks/DemoHook';
 import BauCua from './BauCua'
+import DemoRedux from './DemoRedux';
+import TodoList from './TodolListRedux';
+import QuanLyKhoaHoc from './QuanLyKhoaHoc';
 
 // JSX : Javasript XML = Kết hợp javasript với html lại với nhau
 
@@ -59,7 +62,10 @@ function App() {
     // <State />
     // <Lifecycle />
     // <DemoHook />
-    <BauCua />
+    // <BauCua />
+    // <DemoRedux />
+    // <TodoList />
+    <QuanLyKhoaHoc />
   );
 }
 

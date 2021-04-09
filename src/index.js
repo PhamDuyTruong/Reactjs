@@ -4,10 +4,27 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './Styles'
+// Setup redux
+import {createStore, applyMiddleware, compose} from "redux";
+// Kết nối react với redux với nhau
+import {Provider} from "react-redux"
+// Import rootReducer
+import rootReducer from './redux/reducers/rootReducer';
 
+// Set up <redux-thunk>
+import thunk from 'redux-thunk';
+// Sử dụng middleware
+const middleware = applyMiddleware(thunk);
 
+// Gộp middleware và redux devtools thành một
+const enhancer = compose(middleware, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+
+// Tạo store từ reducer
+const store = createStore(rootReducer, enhancer)
 ReactDOM.render(
-    <App />,
+  <Provider store = { store }>
+    <App />
+  </Provider>,
   document.getElementById('root')
 );
 
