@@ -39,7 +39,7 @@ export default class DemoCar extends Component {
                     
                     <div className="col-sm-6">
                         <h3>Please choose your favorite car's color</h3>
-                        <img src ={this.state.imgUrl} width="450"  height="300"alt="Car"></img>
+                        <img src ={this.state.imgUrl} width="450"  height="300" alt="Car"></img>
                     </div>
                     <div className="col-sm-6">
                         <h3>Change color</h3>

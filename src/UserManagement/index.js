@@ -41,7 +41,7 @@ export default class UserManagement extends Component {
 
       this.fetchUsers();
     } catch (error) {
-      console.log(error);
+      console.log(error);       
     }
   };
 

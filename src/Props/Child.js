@@ -3,8 +3,6 @@ import React, { Component } from 'react'
 // Props là read-only, chỉ dùng để render ra giao diện, không được thay đôi
 // Props thay đổi, component render lại
 export default class Child extends Component {
-
-    
     
 
     render() {

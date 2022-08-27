@@ -6,9 +6,8 @@ import {getCourses} from '../redux/Action/coursesAction'
 // Lấy danh sách khoá học từ API và hiến thị ra giao diện
 
 export default function QuanLyKhoaHoc() {
-
     // const [course, setCourse] = useState([]);
-    const { data } = useSelector((state) => state.courses);
+    const { data, isLoading, error } = useSelector((state) => state.courses);
     const dispatch = useDispatch();
 
     useEffect(()=>{
@@ -24,7 +23,16 @@ export default function QuanLyKhoaHoc() {
         // handleGetCourse();
         // dispatch middleware action
         dispatch(getCourses());
-    }, [])
+    }, []);
+
+    if(isLoading){
+        // Tạo <Loading /> component và thế vào
+        return <div>Loading ....</div>;
+    }
+    if(error){
+        // Tạo <MessageError /> component và thế vào
+        return <div>{error}</div>
+    }
     return (
         <div className="container">
             <div className="row">
